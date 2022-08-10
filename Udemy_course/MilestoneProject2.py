@@ -42,34 +42,32 @@ class Hand:
     def add_cards(self, new_cards):
         self.all_cards.append(new_cards)
 
+        self.print_values()
+
     def start_player(self, new_card1, new_card2):
         self.all_cards.append(new_card1)
         self.all_cards.append(new_card2)
 
-        self.print_values(new_card1, new_card2)
+        self.print_values()
 
-    def print_values(self, new_card1, new_card2):
+    def print_values(self):
+        result = 0
+        aces = False
+        cards = ""
+        for a in self.all_cards:
+            cards = a.rank + " of " + a.suit + " | " + cards
+            result = result + int(a.value)
+            if int(a.value) == 1:
+                aces = True
 
-        value1 = int(new_card1.value)
-        value2 = int(new_card2.value)
+        print(result,end="")
 
-        if value1 == 1 or value2 == 1:
-            result = int(value1 + value2)
-            print(new_card1.rank + " of " + new_card1.suit, "   ", new_card2.rank + " of " + new_card2.suit)
-            print(result,end="/")
-            if value1 == 1:
-                result = int(10 + value2)
-                print(result)
-            elif value2 == 1:
-                result = int(value1 + 10)
-                print(result)
+        if aces:
+            result2 = result - 1 + 10
+            print("/ ", result2)
         else:
-
-            result = int(value1 + value2)
-
-            print(new_card1.rank + " of " + new_card1.suit, "   ", new_card2.rank + " of " + new_card2.suit)
-            print(result)
-
+            print()
+        print(cards)
 
 
     def new_hand(self):
@@ -86,8 +84,21 @@ if __name__ == '__main__':
     end = True
     while end:
         while True:
+            player_hand.new_hand()
             money = int(input("How much do you want to bet?"))
-            if money <= player_hand.money:
+            if money < player_hand.money:
                 break
+            player_hand.start_player(new_deck.deal_one(), new_deck.deal_one())
 
-        player_hand.start_player(new_deck.deal_one(), new_deck.deal_one())
+            choise = input("Do you want to deal one? (1-yes 2-No)")
+
+            while choise!= "2":
+                player_hand.add_cards(new_deck.deal_one())
+                choise = input("Do you want to deal one? (1-yes 2-No)")
+
+
+        # while True:
+        #     choise = int(input("Do you want to deal one? (1-yes 2-No)"))
+        #     while choise !=2:
+        #         player_hand.add_cards(new_deck.deal_one())
+        #         choise = int(input("Do you want to deal one? (1-yes 2-No)"))
