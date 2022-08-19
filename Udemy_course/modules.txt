@@ -1,0 +1,10 @@
+from collections import counter
+
+mylist=[1,1,1,1,2,2,2,2,3,3,3,3]
+Counter(mylist) 
+Conter({1:5,2:4,3:7})
+funciona tambem com strings
+Counter('aaaabbbb')
+Conter(sentence.lower().split())
+c = Counter(letters)
+c.most_common(n) -> n é o numero de resultados que eu quero 
