@@ -1,0 +1,69 @@
+import math
+
+value = 4.35
+
+math.floor(value) -> para o integer abaixo
+math.ceil(value) -> para o integer a cima
+round(value) -> round to even se for .5, muda para o que está mais perto
+from math import pi
+log -> math.log(100,10) -> 2.0 -> (10**2)
+
+seed -> permite que os mesmo random numbers fiquem guardados
+random.seed(42)
+random.randint(0,100)
+-> fica o mesmo valor
+random.choice(mylist)-> numero random de uma lista
+random.choice(population = mylist,k=numero de numeros que quero)
+random.sample(population=mylist, k = numero de numeros que quero)-> sem repetidos
+
+
+
+regex patterns -> para encontrar padrões num texto
+import regex
+pattern = 'word'
+
+re.search(pattern,text) -> diz onde começa e onde acaba a word 
+matches = re.findall('word',text) -> encontra todos
+
+for match in re.finditer('word',text):
+	print(match) -> envia o inicio e fim dentro do texto da palavra que queremos procurar
+	print(match.group()) -> retorna a palavra que se encontra dentro do padrão que procurámos
+
+special char in the course notebook
+
+phone = re.search(r'\d\d\d-\d\d\d-\d\d\d\d',text)
+phone = re.search(r'\d{3}-\d{3}-\d{4}',text)
+phone_pattern = re.compile(r'(\d{3})-(\d{3})-(\d{4})') -> quando queremos chamar apenas um dos grupos
+results = re.search(phone_pattern,text)
+results.group(1) ou (2) ou (3) -> aqui começa no 1 e não no 0
+
+
+\d+ -> occurs one or more times
+\d{3,} -> occurs 3 or more times
+* -> zero or more times
+? -> Once or none
+
+re.search(r'cat|dog','The cat is here') -> o | funciona como um or
+re.findall(r'.at','The cat in the hat sat there') -> o . faz com que retorne os valores antes do at
+cada ponto funciona como um wildcard
+
+re.findall(r'^\d','1 is a number') -> ^ starts with, só funciona se o texto inteiro começar com um digito, não procura no meio
+r'\d$' -> ends with
+
+phrase = 'there are 3 numbers 34 inside 5 this setence'
+pattern = r'[^\d]+' exclude the numbers e o + junta todas as palavras entre os numeros
+re.findall(pattern,phrase)
+
+
+
+clean = re.findall(r'[^!.?]+',text) -> remove pontuation e para tirar os espaços apenas pono um expaço dentro dos []
+
+''.join(clean) -> faz a frase novamente mas sem os pontos
+
+find words that have a - in them
+
+pattern = r'[\w]+-[\w]+'
+
+
+
+ 
