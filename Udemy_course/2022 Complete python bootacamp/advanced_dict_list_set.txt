@@ -1,0 +1,46 @@
+hex() -> hexadecimal
+bin() -> binario
+
+
+pow(number,exponte,dividendo) -> x**y % z | %==mod()
+
+s = "hello world"
+
+s.center(20,'z')
+-> zzzzhello worldzzzzz"
+
+
+apenas em sets
+
+s1.difference_update(s2)
+
+remove do s1 todos os que tem no s2
+
+s1.intersection_update(s2)
+funciona igual mas com a interceção
+
+s1.symmetric_difference(s2) -> retorna os valores que não estão nos dois sets
+
+s1.union(s2) == s1.update(s2) -> union normal
+
+
+dictionary compreenhsion
+{x:x**2 for x in range(10)}
+{0:0,1:1,2:4,....9:81}
+
+{k:v**2 for k,v in zip(['a','b',range(2))}
+{'a':0,'b':1}
+
+for k in d.iteritems():
+	print k
+	
+d.iterkeys -> keys
+d.itervalues -> values
+d.viewitems() -> dict_items([('key1','value1')('key2','value2')])
+d.viewvalues()
+d.viewkeys()
+
+
+list 
+l.insert(num,value) -> num is where in the list you want to append
+
