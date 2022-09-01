@@ -1,0 +1,194 @@
+body {
+  background-color: #ccc;
+  margin: 1em;
+  font-size: 20px;
+  font-family: arial;
+}
+INPUT, BUTTON {
+  font-size: 20px;
+  padding: 6px;
+}
+H1 {
+  color: #194e9c;
+  margin-bottom: 0px;
+}
+.flag {
+  position: relative;
+  float: left;
+  width: 4em;
+  height: 4em;
+  margin: 0.8em;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+  -webkit-filter: drop-shadow(0.2em 0.2em 0.4em rgba(0,0,0,0.3));
+  -webkit-transition: -webkit-transform 0.3s, background-color 0.7s;
+  -webkit-transition-timing-function: cubic-bezier(.76,.13,.19,1.44);
+  -webkit-transform-style: preserve-3d;
+}
+.flag:hover {
+  transform: scale(1.5,1.5);
+}
+.flagA {
+  background: transparent;
+  border-top: 2em solid #194e9c;
+  border-right: 1.3333333333333em solid transparent;
+  border-bottom: 2em solid #194e9c;
+}
+.flagA:before {
+  content: "
+ "
+ ;
+  position: absolute;
+  top: -2em;
+  left: 0;
+  height: 4em;
+  width: 2em;
+  background-color: white;
+  z-index: 5;
+}
+.flagB {
+  background: transparent;
+  border-top: 2em solid #cd132b;
+  border-right: 1.3333333333333em solid transparent;
+  border-bottom: 2em solid #cd132b;
+}
+.flagC {
+  background: -webkit-linear-gradient(top,#194e9c 0%,#194e9c 20%,white 20%,white 40%,#cd132b 40%,#cd132b 60%,white 50%,white 80%,#194e9c 80%,#194e9c 100%);
+}
+.flagD {
+  background: -webkit-linear-gradient(top,#fbd11b 0%,#fbd11b 25%,#194e9c 25%,#194e9c 75%,#fbd11b 75%,#fbd11b 100%);
+}
+.flagE {
+  background: -webkit-linear-gradient(top,#194e9c 0%,#194e9c 50%,#cd132b 50%,#cd132b 100%);
+}
+.flagF {
+  background-color: #cd132b;
+  background-image: linear-gradient(45deg,white 25%,transparent 25%,transparent 75%,white 75%), linear-gradient(-45deg,white 25%,transparent 25%,transparent 75%,white 75%);
+}
+.flagG {
+  background: -webkit-linear-gradient(left,#fbd11b 0%,#fbd11b 16.66%,#194e9c 16.66%,#194e9c 33.33%,#fbd11b 33.33%,#fbd11b 50%,#194e9c 50%,#194e9c 66.66%,#fbd11b 66.66%,#fbd11b 83.33%,#194e9c 83.33%,#194e9c 100%);
+}
+.flagH {
+  background: -webkit-linear-gradient(left,white 0%,white 50%,#cd132b 50%,#cd132b 100%);
+}
+.flagI {
+  background-color: #fbd11b;
+}
+.flagI:after {
+  content: "
+ "
+ ;
+  background-color: #000000;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+  border-radius: 50%;
+}
+.flagJ {
+  background: -webkit-linear-gradient(top,#194e9c 0%,#194e9c 33.33%,white 33.33%,white 66.66%,#194e9c 66.66%,#194e9c 100%);
+}
+.flagK {
+  background: -webkit-linear-gradient(left,#fbd11b 0%,#fbd11b 50%,#194e9c 50%,#194e9c 100%);
+}
+.flagL {
+  background-color: #000000;
+  background-image: linear-gradient(0,#fbd11b,#fbd11b), linear-gradient(0,#fbd11b,#fbd11b);
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  background-position: 0 0, 100% 100%;
+}
+.flagM {
+  background-color: #194e9c;
+  background-image: linear-gradient(45deg,transparent 42.93%,white 42.93%,white 57.07%,transparent 57.07%), linear-gradient(-45deg,transparent 42.93%,white 42.93%,white 57.07%,transparent 57.07%);
+}
+.flagN {
+  background-image: linear-gradient(-45deg,#194e9c 25%,transparent 25%,transparent 75%,#194e9c 75%,#194e9c), linear-gradient(-45deg,#194e9c 25%,transparent 25%,transparent 75%,#194e9c 75%,#194e9c);
+  background-size: 50% 50%;
+  background-position: 0 0, 50% 50%;
+}
+.flagO {
+  background-image: linear-gradient(45deg,#fbd11b 50%,#cd132b 50%);
+}
+.flagP {
+  background-image: linear-gradient(0,#194e9c 33.33%,transparent 33.33%,transparent 66.66%,#194e9c 66.66%), linear-gradient(90deg,#194e9c 33.33%,transparent 33.33%,transparent 66.66%,#194e9c 66.66%);
+}
+.flagQ {
+  background-color: #fbd11b;
+}
+.flagR {
+  background-color: #cd132b;
+  background-image: linear-gradient(0,transparent 40%,#fbd11b 40%,#fbd11b 60%,transparent 60%), linear-gradient(90deg,transparent 40%,#fbd11b 40%,#fbd11b 60%,transparent 60%);
+}
+.flagS {
+  background-color: #194e9c;
+  background-image: linear-gradient(0,white 33.33%,transparent 33.33%,transparent 66.66%,white 66.66%), linear-gradient(90deg,white 33.33%,transparent 33.33%,transparent 66.66%,white 66.66%);
+}
+.flagT {
+  background-image: linear-gradient(90deg,#cd132b 33.33%,white 33.33%,white 66.66%,#194e9c 66.66%);
+}
+.flagU {
+  background-image: linear-gradient(0,#cd132b,#cd132b), linear-gradient(0,#cd132b,#cd132b);
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  background-position: 0 0, 100% 100%;
+}
+.flagV {
+  background-image: linear-gradient(45deg,transparent 42.93%,#cd132b 42.93%,#cd132b 57.07%,transparent 57.07%), linear-gradient(-45deg,transparent 42.93%,#cd132b 42.93%,#cd132b 57.07%,transparent 57.07%);
+}
+.flagW {
+  background-image: linear-gradient(90deg,#194e9c 20%,white 20%,white 40%,transparent 40%,transparent 60%,white 60%,white 80%,#194e9c 80%), linear-gradient(0,#194e9c 20%,white 20%,white 40%,#cd132b 40%,#cd132b 60%,white 60%,white 80%,#194e9c 80%);
+  background-size: 100% 60%, 100% 100%;
+  background-repeat: no-repeat;
+  background-position: 0 50%, 0 0;
+}
+.flagX {
+  background-image: linear-gradient(0,transparent 40%,#194e9c 40%,#194e9c 60%,transparent 60%), linear-gradient(90deg,transparent 40%,#194e9c 40%,#194e9c 60%,transparent 60%);
+}
+.flagY {
+  background: -webkit-linear-gradient(-45deg,#fbd11b 0%,#fbd11b 10%,#cd132b 10%,#cd132b 20%,#fbd11b 20%,#fbd11b 30%,#cd132b 30%,#cd132b 40%,#fbd11b 40%,#fbd11b 50%,#cd132b 50%,#cd132b 60%,#fbd11b 60%,#fbd11b 70%,#cd132b 70%,#cd132b 80%,#fbd11b 80%,#fbd11b 90%,#cd132b 90%,#cd132b 100%);
+}
+.flagZ {
+  background-repeat: no-repeat;
+  background-image: linear-gradient(45deg,#000000 50%,#fbd11b 50%), linear-gradient(-45deg,#194e9c 50%,#fbd11b 50%), linear-gradient(-45deg,#cd132b 50%,#000000 50%), linear-gradient(45deg,#cd132b 50%,#194e9c 50%);
+  background-size: 50% 50%;
+  background-position: 0% 0%, 100% 0%, 0% 100%, 100% 100%;
+}
+.flag0 {
+  background-repeat: no-repeat;
+  background-color: white;
+  background-position: top, left, 0 0, 0 0, 0 0, 0 0;
+  background-size: 33% 100%, 100% 33%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+  background-image: linear-gradient(to bottom,#ffffff 33%,transparent 33%,transparent 66%,#ffffff 66%), linear-gradient(to right,#ffffff 33%,transparent 33%,transparent 66%,#ffffff 66%), linear-gradient(to right,#ffffff 0,#ffffff 5%,transparent 5%,transparent 25%,#ffffff 25%,#ffffff 40%,transparent 40%,transparent 60%,#ffffff 60%,#ffffff 75%,transparent 75%,transparent 95%,#ffffff 95%), linear-gradient(to bottom,#ffffff 0,#ffffff 5%,transparent 5%,transparent 25%,#ffffff 25%,#ffffff 40%,transparent 40%,transparent 60%,#ffffff 60%,#ffffff 75%,transparent 75%,transparent 95%,#ffffff 95%), linear-gradient(to right,transparent 0,transparent 12%,#194e9c 12%,#194e9c 18%,transparent 18%,transparent 47%,#194e9c 47%,#194e9c 53%,transparent 53%,transparent 82%,#194e9c 82%,#194e9c 88%,transparent 88%), linear-gradient(to bottom,transparent 0,transparent 12%,#194e9c 12%,#194e9c 18%,transparent 18%,transparent 47%,#194e9c 47%,#194e9c 53%,transparent 53%,transparent 82%,#194e9c 82%,#194e9c 88%,transparent 88%);
+}
+.flag1 {
+  background: -webkit-linear-gradient(top,#cd132b 33.33%,#fbd11b 33.33%,#fbd11b 66.66%,#cd132b 66.66%);
+}
+.flag2 {
+  background: -webkit-linear-gradient(top,#fbd11b 33.33%,#cd132b 33.33%,#cd132b 66.66%,#fbd11b 66.66%);
+}
+.flag3 {
+  background: -webkit-linear-gradient(top,#194e9c 33.33%,#cd132b 33.33%,#cd132b 66.66%,#194e9c 66.66%);
+}
+.flag4 {
+  background-color: #cd132b;
+  background-image: linear-gradient(45deg,transparent 42.93%,white 42.93%,white 57.07%,transparent 57.07%), linear-gradient(-45deg,transparent 42.93%,white 42.93%,white 57.07%,transparent 57.07%);
+}
+.flag5 {
+  background-color: #fbd11b;
+  background-image: linear-gradient(45deg,transparent 42.93%,#194e9c 42.93%,#194e9c 57.07%,transparent 57.07%), linear-gradient(-45deg,transparent 42.93%,#194e9c 42.93%,#194e9c 57.07%,transparent 57.07%);
+}
+.flag6 {
+  background-image: linear-gradient(-45deg,white 14.29%,#194e9c 14.29%,#194e9c 28.57%,white 28.57%,white 42.86%,#194e9c 42.86%,#194e9c 57.14%,white 57.14%,white 71.43%,#194e9c 71.43%,#194e9c 85.71%,white 85.71%);
+}
+.flag7 {
+  background-image: linear-gradient(90deg,#cd132b 33.33%,white 33.33%,white 66.66%,#cd132b 66.66%);
+}
+.flag8 {
+  background-image: linear-gradient(90deg,#fbd11b 33.33%,#194e9c 33.33%,#194e9c 66.66%,#fbd11b 66.66%);
+}
+.flag9 {
+  background-image: linear-gradient(90deg,#194e9c 33.33%,white 33.33%,white 66.66%,#194e9c 66.66%);
+}
+   

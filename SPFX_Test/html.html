@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css.css">
+        <script >
+            function convert() {
+        var input = document.getElementById("message").value.toUpperCase();
+        var output = document.getElementById("output");
+        //Reset Output box
+        output.innerHTML="";
+       
+        //Loop through each character
+        for (var i = 0; i < input.length; i++) {
+           var character = input.charAt(i);
+           if ("ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".indexOf(character)>=0) {
+              var flag = document.createElement("DIV");  
+              flag.className="flag flag" + character;
+              console.log(output)
+              output.appendChild(flag); 
+           }
+        }
+     }
+     
+     convert();
+        </script>
+    </head>
+    
+    <center>
+        <h1>Maritime Signal Flags Translator</h1>
+        <hr/>
+      <input type="text" id="message" value="Happy Sailing">
+      <button onclick="convert();">Submit</button>
+      </center>
+      <hr/>
+      <div id="output">
+        
+      </div> 
+</html>
